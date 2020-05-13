@@ -11,7 +11,7 @@
 n = 8;
 m = 50 * n;
 w = linspace(-pi, pi, m)';
-D = 3.8258;
+D = 3.824;
 Hdes = exp(-j*D*w);
 A = exp( -j*kron(w,[0:n-1]) );
 
