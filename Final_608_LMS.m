@@ -46,8 +46,8 @@ axis([0,pi,-pi,pi])
 xlabel('w'), ylabel('phase H(w)')
 
 error_fir = A*h - Hdes;
-error = 0;
+error = zeros(8);
 for i=1:8
-    error = error + norm(error_fir(i));
+    error(i) = norm(error_fir(i));
 end
-error = error / N;
+error_final = max(error);
